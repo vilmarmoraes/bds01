@@ -16,12 +16,12 @@ public class Department {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long id;
-	public String name;
-	
+	private Long id;
+	private String name;
+
 	@OneToMany(mappedBy = "department")
 	public List<Employee> employees = new ArrayList<>();
-	
+
 	public Department() {
 	}
 
